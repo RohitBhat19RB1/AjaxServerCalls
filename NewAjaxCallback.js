@@ -11,7 +11,7 @@ function makeAJAXCall(methodType, url, callback, async = true, data = null){
         console.log("State changed Called at: " + showTime() + "Ready State:" + xhr.readyState + "Status:" + xhr.status);
         if(xhr.readyState === 4){
             //Matching all 200 Series Responses
-            if(xhr.status === 200 || xhr.status ===201){
+            if(xhr.status === 200 || xhr.status === 201){
                 callback(xhr.responseText);
             } else if(xhr.status >= 400){
                 console.log("Handle 400 Clent Error or 500 Server Error at:" + showTime());
